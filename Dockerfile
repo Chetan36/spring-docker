@@ -6,7 +6,7 @@ WORKDIR /usr/src/app/demo
 COPY . .
 
 RUN mvn clean install
-RUN cd target/
+WORKDIR /usr/src/app/demo/target
 
 EXPOSE 8091
 CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
